@@ -1,0 +1,57 @@
+{
+  "name": "distilroberta_aux1_seed3",
+  "model": "distilroberta",
+  "aux_weight": 1.0,
+  "seed": 3,
+  "params": {
+    "aux_weight": 1.0,
+    "seed": 3,
+    "epochs": 3,
+    "batch_size": 32,
+    "lr": 3e-05,
+    "max_length": 128,
+    "limit": null,
+    "save_model": false,
+    "best_epoch": 2
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_main_loss": 0.19750744399962702,
+      "train_aux_loss": 0.538443847557511,
+      "val_pr_auc": 0.5125055423136471
+    },
+    {
+      "epoch": 2,
+      "train_main_loss": 0.1419759913328847,
+      "train_aux_loss": 0.5061982996536024,
+      "val_pr_auc": 0.5261565390147441
+    },
+    {
+      "epoch": 3,
+      "train_main_loss": 0.10622540172989095,
+      "train_aux_loss": 0.49850279342646553,
+      "val_pr_auc": 0.5078853910725628
+    }
+  ],
+  "val": {
+    "pr_auc": 0.5261565390147441,
+    "roc_auc": 0.9249560605353616,
+    "f1": 0.5207296849087893,
+    "precision": 0.4590643274853801,
+    "recall": 0.6015325670498084,
+    "fpr": 0.05006765899864682,
+    "fpr_race_supportive": 0.05353319057815846,
+    "threshold": 0.11858033388853073
+  },
+  "test": {
+    "pr_auc": 0.49170752288079966,
+    "roc_auc": 0.9125833457730008,
+    "f1": 0.49916805324459235,
+    "precision": 0.4411764705882353,
+    "recall": 0.5747126436781609,
+    "fpr": 0.05140692640692641,
+    "fpr_race_supportive": 0.054466230936819175,
+    "threshold": 0.11858033388853073
+  }
+}

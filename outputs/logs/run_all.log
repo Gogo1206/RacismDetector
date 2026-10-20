@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+train:  31652 comments | 6.6% racist | 3731 race-supportive
+val  :   3956 comments | 6.6% racist | 467 race-supportive
+test :   3957 comments | 6.6% racist | 459 race-supportive
+| Model | runs | pr_auc | roc_auc | f1 | precision | recall | fpr | fpr_race_supportive |
+|---|---|---|---|---|---|---|---|---|
+| DistilRoBERTa single-task | 3 | 0.475 ± 0.016 | 0.907 ± 0.009 | 0.470 ± 0.002 | 0.426 ± 0.041 | 0.535 ± 0.073 | 0.052 ± 0.016 | 0.068 ± 0.021 |
+| DistilRoBERTa multi-task (λ=1) | 3 | 0.495 ± 0.007 | 0.913 ± 0.005 | 0.498 ± 0.016 | 0.458 ± 0.028 | 0.552 ± 0.072 | 0.047 ± 0.011 | 0.048 ± 0.011 |
+| TF-IDF + LogReg | 1 | 0.394 | 0.867 | 0.404 | 0.332 | 0.517 | 0.074 | 0.111 |
+
+error samples from distilroberta_aux1_seed3 -> outputs/error_samples.md

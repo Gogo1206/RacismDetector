@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+data/
+outputs/models/
+# Contains offensive dataset text.
+outputs/error_samples.md
+.DS_Store

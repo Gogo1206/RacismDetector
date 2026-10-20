@@ -1,0 +1,32 @@
+W1016 22:04:58.293000 52724 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 12892.20it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: distilbert/distilroberta-base
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+lm_head.layer_norm.weight   | UNEXPECTED |  | 
+lm_head.layer_norm.bias     | UNEXPECTED |  | 
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+lm_head.dense.bias          | UNEXPECTED |  | 
+lm_head.bias                | UNEXPECTED |  | 
+lm_head.dense.weight        | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+distilroberta_aux0_seed1 on mps: 31652 train comments, 2970 steps
+  epoch 1 step 200: loss 0.3130 (main 0.3130, aux 0.6751) 1.7 it/s
+  epoch 1 step 400: loss 0.2625 (main 0.2625, aux 0.6748) 1.7 it/s
+  epoch 1 step 600: loss 0.2414 (main 0.2414, aux 0.6759) 1.7 it/s
+  epoch 1 step 800: loss 0.2241 (main 0.2241, aux 0.6773) 1.7 it/s
+epoch 1: val PR-AUC 0.4618 (612s)
+  epoch 2 step 200: loss 0.1616 (main 0.1616, aux 0.6836) 1.6 it/s
+  epoch 2 step 400: loss 0.1609 (main 0.1609, aux 0.6839) 1.6 it/s
+  epoch 2 step 600: loss 0.1570 (main 0.1570, aux 0.6836) 1.7 it/s
+  epoch 2 step 800: loss 0.1529 (main 0.1529, aux 0.6834) 1.7 it/s
+epoch 2: val PR-AUC 0.4582 (614s)
+  epoch 3 step 200: loss 0.1224 (main 0.1224, aux 0.6822) 1.7 it/s
+  epoch 3 step 400: loss 0.1171 (main 0.1171, aux 0.6824) 1.7 it/s
+  epoch 3 step 600: loss 0.1178 (main 0.1178, aux 0.6831) 1.7 it/s
+  epoch 3 step 800: loss 0.1175 (main 0.1175, aux 0.6840) 1.7 it/s
+epoch 3: val PR-AUC 0.4547 (603s)
+test: {'pr_auc': 0.46, 'roc_auc': 0.898, 'f1': 0.471, 'precision': 0.435, 'recall': 0.513, 'fpr': 0.047, 'fpr_race_supportive': 0.063, 'threshold': 0.256}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "racism-detector"
+version = "0.1.0"
+description = "Multi-task DistilRoBERTa for detecting racist online comments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4",
+    "transformers>=4.44",
+    "datasets>=2.20",
+    "scikit-learn>=1.5",
+    "pandas>=2.2",
+    "pyarrow>=15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
